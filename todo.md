@@ -1,0 +1,7 @@
+- neomutt
+- nvim
+- music player and download library
+- fix sleep
+- qutebrowser
+- windows vm with altium
+- 

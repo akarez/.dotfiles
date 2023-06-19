@@ -1,0 +1,11 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+Before=sleep.target
+
+[Service]
+User=akarez
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/slock
+
+[Install]
+WantedBy=sleep.target

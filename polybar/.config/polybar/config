@@ -1,0 +1,183 @@
+##############################
+#                            #
+# Polybar Configuration File #
+#                            #
+##############################
+
+[settings]
+
+screenchange-reload = true
+#compositing-background = xor
+#compositing-background = screen
+#compositing-foreground = source
+#compositing-border = over
+pseudo-transparency = false
+
+[global/wm]
+
+margin-top = 0
+margin-bottom = 0
+
+[colors] 
+
+background = #FC002B36 
+background-alt = #073642 
+
+foreground = #839496 
+foreground-alt = #586E75
+foreground-bright = #fdf6e3 
+
+[bar/main]
+
+monitor = 
+monitor-fallback = DP-4
+dpi = 96
+
+wm-restack = bspwm
+enable-ipc = true
+
+width = 100%
+height = 30
+radius = 0
+
+#offset-x = 0
+#offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #E8E9EC
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = SF Mono:size=10:antialias=true;3
+font-1 = Font Awesome 5 Free:style=Solid:pixelsize=9;1
+
+modules-left = bspwm  
+modules-right = wired wireless pulseaudio battery time
+
+tray-position = none
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/bspwm]
+
+type = internal/bspwm
+
+pin-workspaces = true
+enable-click = true
+
+format = <label-state> <label-mode>
+
+label-focused = [WKSP%index%]
+label-focused-padding = 1
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+
+label-occupied = WKSP%index%
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.foreground}
+label-occupied-background = ${colors.background}
+
+label-empty = WKSP%index%
+label-empty-padding = 1
+label-empty-foreground = ${colors.background-alt}
+
+[module/pulseaudio]
+
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+
+label-volume = VOL:%percentage%%
+label-volume-background = ${colors.background}
+label-volume-foreground = ${colors.foreground}
+
+label-muted = MUTED
+label-muted-foreground = ${colors.red}
+label-muted-background = ${colors.background}
+
+[module/battery]
+
+type = internal/battery
+
+full-at = 99
+
+battery = BAT0
+adapter = ADP1
+
+poll-interval = 1
+
+time-format = %H:%M
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+
+label-charging = BAT:%percentage%% 
+label-discharging = BAT:%percentage%%
+label-full = BAT:%percentage%%
+
+bar-capacity-width = 1
+
+[module/time]
+
+type = internal/date
+interval = 1
+
+time = %I:%M %p
+
+format = <label>
+label = "%time%"
+
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+
+[module/wired]
+
+type = internal/network
+
+interface = enp4s0
+interval = 1.0
+
+unknown-as-up = true
+accumulate-stats = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground}
+
+[module/wireless]
+
+type = internal/network
+
+interface = wlo1
+interval = 1.0
+
+unknown-as-up = true
+accumulate-stats = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = NET:ONLINE  
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground}
+
+# vim: ft=cfg

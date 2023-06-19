@@ -1,0 +1,52 @@
+/////////////////////////////
+//                         //
+// Rofi Configuration File //
+//                         //
+/////////////////////////////
+
+configuration {
+    modi:	                "run,drun";
+	display-drun:           ":";
+    drun-display-format:    "{name}";
+    font:	                "SF Mono 11";
+    dpi:                    96;
+ }
+
+@theme "/dev/null"
+
+* {
+    background-color:   #002B36;
+    text-color:         #939496;
+}
+window {
+    anchor:     north;
+    location:   north;
+    width:      100%;
+    padding:    4px;
+    children:   [ horibox ];
+}
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
+}
+listview {
+    layout:     horizontal;
+    spacing:    25px;
+    lines:      20;
+}
+entry {
+    expand:     false;
+    width:      10em;
+}
+element {
+    padding: 0px 0px;
+}
+element selected {
+    background-color:   #002B36;
+    text-color:         #939496;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
