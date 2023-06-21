@@ -1,9 +1,14 @@
 # Installation
 
-## Networks
-Use the iwd utility to connet to WiFi:
+## Table of Contents
+- [Networks](#networks)
+- [Partitioning](#partitioning)
+- [Create Partitions](#create-partitions)
 
-*Note: If you have an ethernet connection you can skip to the next section.*
+## Networks
+Use the iwd utility to connect to WiFi:
+
+>Note: If you have an ethernet connection you can skip to the next section.
 
 ```
 ~# iwctl
@@ -17,7 +22,7 @@ List all connected network cards:
 
 Scan for available networks:
 
-*Note: wlan0 is my card, yours might be different.*
+>Note: wlan0 is my card, yours might be different.
 
 ```
 [iwd]# station wlan0 scan
@@ -58,7 +63,7 @@ List all connected drives:
 
 Use the gdisk utility to partition the drive:
 
-*Note: This step is very important. You must target the right drive, or you risk erasing any data or operating system in another device. nvme0n1 is my drive, yours might be different.*
+>Note: This step is very important. You must target the right drive, or you risk erasing any data or operating system in another device. nvme0n1 is my drive, yours might be different.
 
 ```
 ~# gdisk /dev/nvme0n1
@@ -77,7 +82,7 @@ Command (? for help): n
 Select partition number. Press enter for default:
 
 ```
-Partition number (default 1): 
+Partition number (default 1):
 ```
 
 Select first sector. Press enter for default:
@@ -265,7 +270,7 @@ Check that partitions are mounted correctly:
 ## Base System
 ### Install Base Packages
 
-*Note: In this step we will also install a text editor. I chose nano to keep things simple. You may install whichever you are most comfortable with*
+>Note: In this step we will also install a text editor. I chose nano to keep things simple. You may install whichever you are most comfortable with.
 
 ```
 ~# pacstrap /mnt base linux linux-firmware nano
@@ -287,7 +292,7 @@ Before we continue, change the apparent root directory to the root partition we 
 ### Configure Time Zones 
 Select your region:
 
-*Note: My region is America, New York. Yours might be different.*
+>Note: My region is America, New York. Yours might be different.
 
 ```
 ~# ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
@@ -301,7 +306,7 @@ Synchronize hardware clock and system clock:
 
 Select locale:
 
-*Note: With this command (and any time we use nano) you will edit a configuration file. Look for your locale and uncomment it by removing the # in front of it. Once done, save and exit.*
+>Note: With this command (and any time we use nano) you will edit a configuration file. Look for your locale and uncomment it by removing the # in front of it. Once done, save and exit.
 
 ```
 ~# nano /etc/locale.gen
@@ -320,7 +325,7 @@ Generate locale:
 
 Set system language:
 
-*Note: The file will be empty. Enter LANG= followed by your locale. Save and exit.*
+>Note: The file will be empty. Enter LANG= followed by your locale. Save and exit.
 
 ```
 ~# nano /etc/locale.conf
@@ -331,7 +336,7 @@ LANG=en_US.UTF-8
 ### Configure Host Info
 Set host name:
 
-*Note: The file will be empty. Enter the name you want for your machine, mine is "machine". Save and exit.*
+>Note: The file will be empty. Enter the name you want for your machine, mine is "machine". Save and exit.
 
 ```
 ~# nano /etc/hostname
@@ -385,7 +390,7 @@ Install some extra packages:
 
 Set root password:
 
-*Note: You will be prompted to type a password. Type it and press enter.*
+>Note: You will be prompted to type a password. Type it and press enter.
 
 ```
 ~# passwd
@@ -405,7 +410,7 @@ Set your user password:
 
 Give user root privileges:
 
-*Note: Uncomment the line shown below. This will give any user in the wheel group permisison to execute any command. Save and exit.*
+>Note: Uncomment the line shown below. This will give any user in the wheel group permisison to execute any command. Save and exit.
 
 ```
 ~# EDITOR=nano visudo
@@ -465,7 +470,7 @@ Install the YAY AUR helper. This will allow you to install packages from the Arc
 
 Install display, audio, and wireless packages:
 
-*Note: If you have an AMD GPU install xf86-video-amdgpu instead*
+>Note: If you have an AMD GPU install xf86-video-amdgpu instead
 
 ```
 ~$ sudo pacman -S xf86-video-intel xf86-video-amdgpu xorg xorg-xinit xorg-xev xorg-xbacklight arandr alsa-utils pulseaudio bluez bluez-utils
