@@ -2,8 +2,28 @@
 
 ## Table of Contents
 - [Networks](#networks)
-- [Partitioning](#partitioning)
-- [Create Partitions](#create-partitions)
+- [Partitions](#partitioning)
+  - [Create](#create-partitions)
+    - [Boot](#boot-partition)
+    - [Swap](#swap-partition)
+    - [Root](#root-partition)
+    - [Home](#home-partition)
+  - [Format](format-partitions)
+  - [Mount](mount-partitions)
+- [Base System](base-system)
+  - [Install Base Packages](install-base-packages)
+  - [Enter Chroot](enter-chroot)
+  - [Configure Time Zones](configure-time-zones)
+  - [Configure Host Info](configure-host-info)
+- [Bootloader](bootloader)
+- [Finishing Up](finishing-up)
+  - [Users and Passwords](users-and-passwords)
+  - [Network Manager](network-manager)
+  - [Exit Installation](exit-installation)
+- [Install Desktop Environment](install-desktop-environment)
+  - [Essential Packages](essential-packages)
+  - [Optional Packages](optional-packages)
+- [Load Configuration](load-configuration)
 
 ## Networks
 Use the iwd utility to connect to WiFi:
@@ -486,7 +506,7 @@ Install window management and system utilities:
 ~$ yay -S polybar ueberzug coreshot xidlehook neofetch apple-fonts ttf-ms-win10-auto gtk-theme-numix-solarized redshift
 ```
 
-### Optional 
+### Optional Packages
 
 The following are packages that I use but are not necessary for a working system. I put them here anyway so I can copy paste the command when needed:
 
@@ -503,7 +523,7 @@ The following are packages that I use but are not necessary for a working system
 
 ```
 
-## Configuration
+## Load Configuration
 
 The configuration files are managed with [GNU Stow](https://www.gnu.org/software/stow/). To setup, navigate into the cloned directory and enter the following command:
 
