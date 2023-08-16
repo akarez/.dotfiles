@@ -8,9 +8,9 @@
   - [Mount](mount-partitions)
 - [Base System](base-system)
   - [Install Base Packages](install-base-packages)
-  - [Enter Chroot](enter-chroot)
+  - [Change Working Root](enter-chroot)
   - [Configure Time Zones](configure-time-zones)
-  - [Configure Host Info](configure-host-info)
+  - [Configure Host Information](configure-host-info)
 - [Bootloader](bootloader)
 - [Finishing Up](finishing-up)
   - [Users and Passwords](users-and-passwords)
@@ -85,7 +85,7 @@ Use the gdisk utility to partition the drive:
 ~# gdisk /dev/nvme0n1
 ```
 
-For this installation we will have only two partitions, the boot partition and the root partition. If you want swap or a separate home partition the procedure will be similar. Check the [arch wiki](https://wiki.archlinux.org/title/partitioning#/home) for more information.
+For this installation we will have four partitions: boot, swap, root, and home. The root and home partitions are typically together, but some prefer to separate them if you use multiple distributions or make clean installs often. Check the [arch wiki](https://wiki.archlinux.org/title/partitioning#/home) for more information.
 
 #### Boot Partition
 
@@ -362,7 +362,7 @@ machine
 
 Set network host:  
 
-*Note: The file will have two commented lines. Ignore those and enter the following under them. Replace machine with your host name. Save and exit.*
+>Note: The file will have two commented lines. Ignore those and enter the following under them. Replace machine with your host name. Save and exit.
 
 ```
 ~# nano /etc/hosts
@@ -470,7 +470,7 @@ Reboot:
 
 ## Install Desktop Environment
 
-From here on you can install the desktop environment. Below are the steps for the system I currently use.
+From here on you can install the desktop environment. Below are the steps for the system I currently use. See more info [here](https://github.com/akarez/dorfiles).
 
 ### Essential Packages
 
@@ -485,8 +485,6 @@ Install the YAY AUR helper. This will allow you to install packages from the Arc
 ```
 
 Install display, audio, and wireless packages:
-
->Note: If you have an AMD GPU install xf86-video-amdgpu instead
 
 ```
 ~$ sudo pacman -S xf86-video-intel xf86-video-amdgpu xorg xorg-xinit xorg-xev xorg-xbacklight arandr alsa-utils pulseaudio bluez bluez-utils
@@ -512,17 +510,21 @@ The following are packages that I use but are not necessary for a working system
 ~$ sudo pacman -S qemu libvirt iptables-nft dnsmasq virt-manager virt-viewer vde2 bridge-utils openbsd-netcat
 ```
 
-#### Programming Tools
+#### Programming Utilities
 
 ```
-~$ sudo pacman -S kicad nodejs npm rust rust-src arduino-cli 
+~$ sudo pacman -S nodejs npm rust rust-src arduino-cli 
 
 ```
+#### PCB Design Utilities
+```
+~$ sudo pacman -S kicad
 
+```
 ## Load Configuration
 
-The configuration files are managed with [GNU Stow](https://www.gnu.org/software/stow/). To setup, navigate into the cloned directory and enter the following command:
+The configuration files are managed with [GNU Stow](https://www.gnu.org/software/stow/). To setup, first clone [this](https://github.com/akarez/dorfiles) repo. Then, navigate into the cloned directory and enter the following command:
 
 ```
-~$ stow alacritty bash bspwm neofetch nvim polybar ranger rofi slock sxhkd wallpapers x zathura
+~$ stow alacritty bash bspwm neofetch nvim polybar ranger rofi sxhkd wallpapers x zathura
 ```
