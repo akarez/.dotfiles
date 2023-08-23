@@ -292,6 +292,13 @@ Check that partitions are mounted correctly:
 ~# pacstrap /mnt base linux linux-firmware nano
 ```
 
+If you run into an issue with the keyring run the following commands:
+
+```
+~# pacman-key --init
+~# pacman-key --populate archlinux
+```
+
 Generate file system table:
 
 ```
@@ -383,6 +390,8 @@ Install the GRUB package and some extra tools for UEFI:
 ```
 
 Install GRUB:
+
+> Note: If you run into an issue with the EFI installation, make sure when you booted from the USB you selected UEFI boot, not legacy.
 
 ```
 ~# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --recheck
