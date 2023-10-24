@@ -3,8 +3,10 @@
 -- Neovim Configuration File --
 --			                 --
 -------------------------------
-print ("init loaded")
+print ('init loaded')
 
-require "base"
-require "keymaps"
-require "plugins"
+require 'base'
+require 'plugins'
+require 'keymaps'
+
+ require 'plugins'
