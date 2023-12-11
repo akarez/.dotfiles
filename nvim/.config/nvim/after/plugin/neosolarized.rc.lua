@@ -1,7 +1,7 @@
 local status, n = pcall(require, "neosolarized")
-if (not status) then 
+if (not status) then
     print('neosolarized not loaded')
-    return 
+    return
 end
 
 n.setup({

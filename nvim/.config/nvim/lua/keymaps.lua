@@ -1,5 +1,3 @@
-print('keymaps loaded')
-
 local map = vim.keymap
 
 -- invcrement/decrement number in normal mode

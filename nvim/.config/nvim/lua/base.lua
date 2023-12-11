@@ -49,11 +49,12 @@ vim.opt.swapfile = false			            -- don't use a swap file
 vim.opt.writebackup = false		            	-- don't allow editing a file in use
 vim.opt.shell = 'zsh'
 
+vim.opt.fillchars:append { eob = " " }          -- remoe ~ from empty lines
 vim.opt.termguicolors = true			        -- allow terminal gui colors
 vim.opt.winblend = 0                            -- transparency of popup windows
 vim.opt.background = 'dark'
 
--- copy to clipboard
+--@ copy to clipboard
 
 if vim.fn.has "win32" == 1 then
     vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }

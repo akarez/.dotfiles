@@ -23,11 +23,30 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
+
     use {
       'svrana/neosolarized.nvim',
       requires = { 'tjdevries/colorbuddy.nvim' }
     }
-    use 'nvim-lualine/lualine.nvim' -- Statusline
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+        ts_update()
+      end,
+    }
+    use 'nvim-lualine/lualine.nvim'
+
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'L3MON4D3/LuaSnip'
+
+    use 'onsails/lspkind-nvim'
+    use 'neovim/nvim-lspconfig'
+
+    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag'
 
 
 end)
