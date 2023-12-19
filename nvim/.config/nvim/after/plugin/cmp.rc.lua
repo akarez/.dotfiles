@@ -24,7 +24,7 @@ cmp.setup({
         { name = 'buffer' },
       }),
     formatting = {
-        format = lspkind.cmp_format({wirth_text = fasle, maxwidth = 50})
+        format = lspkind.cmp_format({wirth_text = false, maxwidth = 50})
     }
 })
 
