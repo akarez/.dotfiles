@@ -12,7 +12,8 @@ local on_attach = function(client, bufnr)
   end
 end
 
---@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+---@ source: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
 nvim_lsp.lua_ls.setup{
   on_attach = on_attach,
   settings = {
@@ -28,3 +29,30 @@ nvim_lsp.lua_ls.setup{
     },
 }
 
+nvim_lsp.clangd.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.arduino_language_server.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.pyright.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.cssls.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach
+}
+
+nvim_lsp.emmet_language_server.setup {
+  on_attach = on_attach
+}

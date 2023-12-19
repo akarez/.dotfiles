@@ -12,9 +12,19 @@ ts.setup {
         disable = {},
     },
     ensure_installed = { 
-        "c", "lua", "vim", "vimdoc"
+        "lua",
+        "c",
+        "cpp",
+        "arduino",
+        "python",
+        "rust",
+        "html",
+        "css",
+        "javascript",
+        "vim",
+        "vimdoc"
     },
     autotag = {
         enable = true,
     }
-  }
+}
