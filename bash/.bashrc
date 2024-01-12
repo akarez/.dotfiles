@@ -30,6 +30,3 @@ alias gp-s='globalprotect status'
 # Prompt
 
 PS1="\W \$ "
-
-
-. "$HOME/.cargo/env"
