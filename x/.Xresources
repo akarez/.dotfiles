@@ -1,6 +1,6 @@
 ! Dpi
 
-	Xft.dpi:	96
+	Xft.dpi:	144
 
 ! Fonts
 
@@ -11,51 +11,43 @@
 	Xft.antialias:	true
 	Xft.rgba:	    rgb
 
-! Color Scheme [ Decay ]
+!! Color Scheme [Solarized]
 
-#define decay_darker_bg   #0e1217
-#define decay_bg          #171a1f
-#define decay_contrast_bg #15191e
+*background:            #002b36
+*foreground:            #839496
+*fadeColor:             #002b36
+*cursorColor:           #93a1a1
+*pointerColorBackground:#586e75
+*pointerColorForeground:#93a1a1
 
-#define decay_lighter_bg  #1a1e23 
-#define decay_fg          #b6beca
-#define decay_cursor      #b6beca
+!! black dark/light
+*color0:                #073642
+*color8:                #002b36
 
-#define decay_black         #242931
-#define decay_light_black   #485263
-#define decay_red           #e05f65
-#define decay_green         #78DBA9
-#define decay_yellow        #f1cf8a
-#define decay_orange        #e9a180
-#define decay_darker_blue   #4e88d4
-#define decay_contrast_blue #5f94da
-#define decay_blue          #70a5eb
-#define decay_aquamarine    #7ddac5
-#define decay_magenta       #c68aee
-#define decay_cyan          #74bee9
-#define decay_white         #dee1e6
+!! red dark/light
+*color1:                #dc322f
+*color9:                #cb4b16
 
-!-- colors assignment --!
-*.foreground:   decay_white
-*.foreground-alt: decay_light_black
+!! green dark/light
+*color2:                #859900
+*color10:               #586e75
 
-*.background:   decay_darker_bg
-*.cursorColor:  decay_cursor
+!! yellow dark/light
+*color3:                #b58900
+*color11:               #657b83
 
-*.color0: decay_black
-*.color1: decay_red
-*.color2: decay_green
-*.color3: decay_yellow
-*.color4: decay_blue
-*.color5: decay_magenta
-*.color6: decay_cyan
-*.color7: decay_white
+!! blue dark/light
+*color4:                #268bd2
+*color12:               #839496
 
-*.color8: decay_light_black
-*.color9: decay_red
-*.color10: decay_green
-*.color11: decay_yellow
-*.color12: decay_blue
-*.color13: decay_magenta
-*.color14: decay_cyan
-*.color15: decay_white
+!! magenta dark/light
+*color5:                #d33682
+*color13:               #6c71c4
+
+!! cyan dark/light
+*color6:                #2aa198
+*color14:               #93a1a1
+
+!! white dark/light
+*color7:                #eee8d5
+*color15:               #fdf6e3
