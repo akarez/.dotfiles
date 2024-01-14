@@ -1,6 +1,7 @@
-# dotfiles
-The configuration files are managed with [GNU Stow](https://www.gnu.org/software/stow/). To setup, first clone this repo. Then, navigate into the cloned directory and enter the following command:
+# .dotfiles
+The configuration files are managed with [GNU Stow](https://www.gnu.org/software/stow/). To setup, enter the following command on the cloned repo: 
 
 ```
-~$ stow alacritty bash bspwm neofetch nvim polybar ranger rofi sxhkd wallpapers x zathura
+~$ stow alacritty bash bspwm neofetch nvim tmux polybar ranger rofi sxhkd wallpapers x zathura
 ```
+![](https://github.com/akarez/arch-install/blob/main/assets/screenshot.png)
