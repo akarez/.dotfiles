@@ -9,7 +9,6 @@ vim.wo.number = true
 vim.opt.title = true
 
 vim.opt.backup = false				            -- backup file
-vim.opt.clipboard = 'unnamedplus'	            -- allow access to system clipboard
 vim.opt.cmdheight = 2				            -- make the vim command line two lines long
 vim.opt.completeopt = {'menuone', 'noselect'}	-- completion menu options
 vim.opt.conceallevel = 0			            -- allow viewing `` in markdown files
@@ -33,7 +32,7 @@ vim.opt.smartindent = true
 
 vim.opt.number = true                           -- show line numbers
 vim.opt.signcolumn = 'no'                       -- show the sign column for errors and such
-vim.opt.relativenumber = false                  -- show number lines relative to the current line
+vim.opt.relativenumber = true                   -- show number lines relative to the current line
 
 vim.opt.smartcase = true		            	-- allow smart case
 vim.opt.smartindent = true			            -- allow smart indent

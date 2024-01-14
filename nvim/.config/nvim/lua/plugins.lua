@@ -58,4 +58,9 @@ packer.startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-lua/plenary.nvim'
     use 'lewis6991/gitsigns.nvim'
+
+    use 'tadmccorkle/markdown.nvim'     ---@ markdown
+    use 'junegunn/goyo.vim'
+    use 'junegunn/limelight.vim'
+
 end)

@@ -11,20 +11,30 @@ ts.setup {
         enable = true,
         disable = {},
     },
-    ensure_installed = { 
-        "lua",
-        "c",
-        "cpp",
-        "arduino",
-        "python",
-        "rust",
-        "html",
-        "css",
-        "javascript",
-        "vim",
-        "vimdoc"
+    ensure_installed = {
+        'lua',
+        'c',
+        'cpp',
+        'arduino',
+        'python',
+        'rust',
+        'html',
+        'css',
+        'javascript',
+        'vim',
+        'vimdoc',
+        'markdown',
+        'markdown_inline'
     },
     autotag = {
         enable = true,
-    }
+    },
+    modules = {
+
+    },
+    ignore_install = {
+
+    },
+    sync_install = true,
+    auto_install = true,
 }

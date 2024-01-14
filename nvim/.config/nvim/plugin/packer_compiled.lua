@@ -114,6 +114,16 @@ _G.packer_plugins = {
     path = "/home/akarez/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["goyo.vim"] = {
+    loaded = true,
+    path = "/home/akarez/.local/share/nvim/site/pack/packer/start/goyo.vim",
+    url = "https://github.com/junegunn/goyo.vim"
+  },
+  ["limelight.vim"] = {
+    loaded = true,
+    path = "/home/akarez/.local/share/nvim/site/pack/packer/start/limelight.vim",
+    url = "https://github.com/junegunn/limelight.vim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/akarez/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -123,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/akarez/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["markdown.nvim"] = {
+    loaded = true,
+    path = "/home/akarez/.local/share/nvim/site/pack/packer/start/markdown.nvim",
+    url = "https://github.com/tadmccorkle/markdown.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
