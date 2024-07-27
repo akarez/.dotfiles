@@ -39,7 +39,6 @@ vim.opt.smartindent = true			            -- allow smart indent
 
 vim.opt.splitright = true			            -- put new vertical split window on the right
 vim.opt.splitbelow = true			            -- put new horizontal split window on the bottom
-
 vim.opt.undofile = true			            	-- allow persistent undo action
 vim.opt.updatetime = 300			            -- completion time
 vim.opt.swapfile = false			            -- don't use a swap file
@@ -47,7 +46,6 @@ vim.opt.writebackup = false		            	-- don't allow editing a file in use
 vim.opt.shell = 'zsh'
 
 vim.opt.fillchars:append { eob = " " }          -- remove ~ from empty lines
-vim.opt.spelllang = 'en_us'                     -- spell check
 vim.opt.spell = true
 vim.opt.termguicolors = true			        -- allow terminal gui colors
 vim.opt.winblend = 0                            -- transparency of popup windows
