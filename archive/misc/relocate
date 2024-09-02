@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Initiating..."
+cp /home/akarez/.dotfiles/misc/30-touchpad.conf /etc/X11/xorg.conf.d/
+cp /home/akarez/.dotfiles/misc/lock.service /etc/systemd/lock.service
+systemctl enable lock.service
+echo "Done"
+
+

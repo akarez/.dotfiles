@@ -1,0 +1,58 @@
+#! /bin/bash
+
+# Monitor Rules
+#
+
+bspc monitor	DP-0	-d I II III IV V VI
+
+# Launch Scripts
+$HOME/.screenlayout/uw.sh &
+$HOME/.config/polybar/launch.sh &
+$HOME/.fehbg &
+pgrep -x sxhkd > /dev/null || sxhkd &
+xidlehook --not-when-fullscreen --timer 900 'systemctl suspend' '' &
+xsetroot -cursor_name left_ptr &
+picom &
+rfkill unblock all & 
+
+# Window Rules
+
+bspc config window_gap          	15
+bspc config border_width		    0
+bspc config split_ratio          	0.50
+
+bspc config borderless_monocle   	    true
+bspc config single_monocle		        true
+bspc config left_monocle_padding 	    15
+bspc config right_monocle_padding 	    15
+bspc config top_monocle_padding 	    15
+bspc config bottom_monocle_padding      15
+
+bspc config center_pseudo_tiled		    true
+bspc config remove_disabled_monitors	true
+bspc config center_pseudo_tiled		    true
+
+# Mouse Rules
+
+bspc config pointer_modifier	        mod4
+bspc config pointer_action1		        move
+bspc config pointer_action2		        resize_side
+bspc config pointer_action3		        resize_corner
+bspc config focus_follows_pointer       true
+
+# External Rules
+
+bspc config external_rules_command	"$HOME/.config/bspwm/scripts/external_rules.sh"
+
+# Program Rules
+
+bspc rule -a discord	        state=tiled	    center=on   	focus=on    desktop='^5'    follow=on 
+bspc rule -a Zathura            state=tiled     center=on       focus=on
+bspc rule -a Teams	            state=floating	center=on	    focus=on
+bspc rule -a qvidcap            state=floating  center=on       focus=on 
+bspc rule -a lstopo             state=floating  center=on       focus=on
+bspc rule -a pavucontrol        state=floating	center=on		focus=on
+bspc rule -a CoreShot           manage=false
+
+
+bspc wm -O DP-0
