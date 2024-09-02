@@ -1,14 +1,8 @@
-/////////////////////////////
-//                         //
-// Rofi Configuration File //
-//                         //
-/////////////////////////////
-
 configuration {
     modi:	                "run,drun";
 	display-drun:           ":";
     drun-display-format:    "{name}";
-    font:	                "SF Mono 11";
+    font:	                "SF Mono 10";
     dpi:                    96;
  }
 
