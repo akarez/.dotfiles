@@ -1,9 +1,9 @@
 configuration {
-    modi:	                "run,drun";
-	display-drun:           ":";
-    drun-display-format:    "{name}";
-    font:	                "SF Mono 10";
-    dpi:                    96;
+    modi:                "run,drun";
+    display-drun:        ":";
+    drun-display-format: "{name}";
+    font:	         "SF Mono 10";
+    dpi:                 96;
  }
 
 @theme "/dev/null"
