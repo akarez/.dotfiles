@@ -1,7 +1,7 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 25,
+    "position": "bottom",
+    "height": 40,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-right": ["network", "pulseaudio", "battery", "clock"],
@@ -19,7 +19,7 @@
 
     "pulseaudio": {
         "format": "VOL:{volume}%",
-        "format-bluetooth": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% {icon}",
         "format-muted": "MUTED",
     },
 
@@ -29,6 +29,6 @@
 
     "clock": {
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%a, %d. %b  %I:%M %p}"
+	"format-alt": "{:%A, %d. %B  %I:%M %p}"
     }
 }

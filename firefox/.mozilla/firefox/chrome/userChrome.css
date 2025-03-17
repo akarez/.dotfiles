@@ -1,0 +1,11 @@
+.titlebar-buttonbox-container {
+    display: none !important;
+}
+
+.titlebar-spacer[type="post-tabs"] {
+    display: none;
+}
+
+
+
+

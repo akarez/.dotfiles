@@ -3,14 +3,15 @@ export LANG=en_US.UTF-8
 export EDITOR="nvim"
 export BROWSER="firefox"
 export TERMINAL="kitty"
-
+export WALLPAPER="~/Pictures/Wallpapers/solarized-03.webp"
+export OBSIDIAN_USE_WAYLAND=1
 autoload -U colors && colors
 
 PROMPT='%F{blue}%1~ %F{green}$ %F{foreground}'
 
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/.zsh_history
+HISTFILE=~/.cache/zsh/zsh_history
 
 autoload -U compinit
 zstyle ':completion:*' menu select

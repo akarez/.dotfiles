@@ -2,20 +2,20 @@
 * {
     font-family: "SF Mono", "Font Awesome 5 Free";
     font-size: 13px;
-    color: #839496;
+    color: #9bc1c2;
 }
 
 window#waybar {
-    background-color: #002B36;  /* Corrected hex code */
+    background-color: #001e26;  /* Corrected hex code */
     border: 0;
     padding-left: 0px;
-    padding-right: 1px;
+    padding-right: 2px;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #839496;
+    color: #001e26;
 }
 
 #workspaces button.focused {
@@ -27,7 +27,7 @@ window#waybar {
 #clock, #battery, #pulseaudio, #network {
     padding: 0 8px;
     color: #839496;
-    background-color: #002B36;  /* Corrected hex code */
+    background-color: #001e26;  /* Corrected hex code */
 }
 
 #pulseaudio.muted {
