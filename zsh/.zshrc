@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 export EDITOR="nvim"
 export BROWSER="firefox"
 export TERMINAL="kitty"
-export WALLPAPER="~/Pictures/Wallpapers/solarized-03.webp"
+export WALLPAPER="~/Pictures/Wallpapers/paul-pastourmatzis-KT3WlrL_bsg-unsplash.jpg"
 export OBSIDIAN_USE_WAYLAND=1
 autoload -U colors && colors
 

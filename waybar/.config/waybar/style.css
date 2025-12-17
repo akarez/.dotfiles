@@ -1,12 +1,12 @@
 /* General Settings */
 * {
     font-family: "SF Mono", "Font Awesome 5 Free";
-    font-size: 13px;
-    color: #9bc1c2;
+    font-size: 14px;
+    color: #ffffff;
 }
 
 window#waybar {
-    background-color: #001e26;  /* Corrected hex code */
+    background-color: #285577;
     border: 0;
     padding-left: 0px;
     padding-right: 2px;
@@ -15,19 +15,20 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #001e26;
+    color: #ffffff;
 }
 
 #workspaces button.focused {
-    background-color: #073642;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #ffffff;
+    color: #285577;
+    border-radius: 4px;
+    padding: 0 8px;
 }
-
 
 #clock, #battery, #pulseaudio, #network {
     padding: 0 8px;
-    color: #839496;
-    background-color: #001e26;  /* Corrected hex code */
+    color: #ffffff;
+    background-color: #285577;  /* Corrected hex code */
 }
 
 #pulseaudio.muted {
